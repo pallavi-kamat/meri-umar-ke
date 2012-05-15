@@ -13,11 +13,13 @@
         android:layout_height="wrap_content"
         android:text="@string/name"
         android:id="@+id/textName"
+        android:layout_marginRight="20px"
          />
      <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editName"
+        
          />
 </LinearLayout>
 <LinearLayout 
@@ -28,7 +30,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/age"
-        android:id="@+id/textAge" />
+        android:id="@+id/textAge"
+        android:layout_marginRight="40px" />
      <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

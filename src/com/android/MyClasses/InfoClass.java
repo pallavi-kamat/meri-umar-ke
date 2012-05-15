@@ -52,8 +52,8 @@ public class InfoClass {
 
 	@Override
 	public String toString() {
-		return "\n"+"Name=" + iName +"\n"+"Emial Id=" + iEmialId
-				+"\n"+"Age="+iAge+"\n"+"Gender="+iGender;
+		return "\n"+"Name: " + iName +"\n\n"+"Emial Id: " + iEmialId
+				+"\n\n"+"Age: "+iAge+"\n\n"+"Gender: "+iGender;
 	}
 	
 	

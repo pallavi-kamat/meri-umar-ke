@@ -3,6 +3,7 @@ package com.android.ListViewApplication;
 import com.android.MyAdapters.MyHelper;
 import com.android.MyClasses.InfoClass;
 
+import android.R.bool;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -11,6 +12,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DisplayProfileActivity extends Activity {
 	
@@ -18,6 +20,7 @@ public class DisplayProfileActivity extends Activity {
 	InfoClass info;
 	String name;
 	int age;
+	Boolean flag=false;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -49,12 +52,17 @@ public class DisplayProfileActivity extends Activity {
 					if(info.getiName().equals(name) && info.getiAge()==age)
 					{
 						textData.setText(info.toString());
+						flag=true;
 					}
 					Log.d("Data",info.toString());
 				
 				//	cur.moveToNext();
 				}while(cur.moveToNext());
-				
+			
+				if(flag==false)
+				{
+					Toast.makeText(getApplicationContext(), "Data is not present in database",Toast.LENGTH_SHORT).show();
+				}
 			}
 			cur.close();
 			

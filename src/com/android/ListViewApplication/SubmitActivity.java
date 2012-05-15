@@ -44,12 +44,12 @@ public class SubmitActivity extends Activity{
 				db.insert("list",null,cv);
 			
 				
-				ContentValues cv1 = new ContentValues();
+			/*	ContentValues cv1 = new ContentValues();
 				 cv.put("name", "Datta");
 				 cv.put("emailId","Datta@yahoo.com");
 				 cv.put("age",23);
 				 cv.put("gender","Male");
-				db.insert("info",null,cv);
+				db.insert("info",null,cv);*/
 				db.close();
 				
 				Intent intent=new Intent(SubmitActivity.this,ListViewActivity.class);

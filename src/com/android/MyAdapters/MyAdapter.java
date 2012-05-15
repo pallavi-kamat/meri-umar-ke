@@ -60,7 +60,7 @@ public class MyAdapter extends ArrayAdapter<InfoClass>
 			layout=(LinearLayout)convertView;
 		}
 		text=(TextView)layout.findViewById(R.id.text);
-		text.setText(info.getiName()+"\n"+info.getiAge());
+		text.setText(info.getiName()+"\t"+info.getiAge());
 		
 		
 		return layout;
